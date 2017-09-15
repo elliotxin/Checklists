@@ -12,7 +12,7 @@ class ChecklistViewController: UITableViewController {
 
     
     
-    var items: [ChecklistItem]
+    var items :[ChecklistItem]
     
     required init?(coder aDecoder: NSCoder) {
         
@@ -68,6 +68,20 @@ class ChecklistViewController: UITableViewController {
         
     }
 
+    
+    @IBAction func addItem() {
+        
+        let newRowIndex = items.count
+        
+        let item = ChecklistItem()
+        item.text = "I am a new row"
+        item.checked = true
+        items.append(item)
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: indexPaths, with: .automatic)
+    }
 }
 
 extension ChecklistViewController
@@ -84,7 +98,6 @@ extension ChecklistViewController
         
         let item = items[indexPath.row]
         
-        item.toggleChecked()
         configureText(for: cell, with: item)
         configureCheckmark(for: cell, with: item )
         
@@ -98,8 +111,8 @@ extension ChecklistViewController
         if let cell = tableView.cellForRow(at: indexPath){
         
             let item = items[indexPath.row]
-            item.checked = !item.checked
             
+            item.toggleChecked()
             configureCheckmark(for: cell, with: item)
         }
         
@@ -107,6 +120,13 @@ extension ChecklistViewController
         
     }
     
-    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        items.remove(at: indexPath.row)
+        
+        let indexPaths = [indexPath]
+        
+        tableView.deleteRows(at: indexPaths, with: .automatic)
+    }
     
 }
