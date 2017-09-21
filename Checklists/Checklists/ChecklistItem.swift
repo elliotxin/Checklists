@@ -6,7 +6,7 @@
 //  Copyright © 2017 elliot xin. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ChecklistItem: NSObject,NSCoding{
     

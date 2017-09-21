@@ -9,18 +9,18 @@
 import UIKit
 
 
-protocol AddItemViewControllerDelegate: class {
-    func itemDetailViewControllerDidCancel(_ controller: AddItemViewController)
-    func itemDetailViewController(_ controller: AddItemViewController, didFinishAdding item: ChecklistItem)
-    func itemDetailViewController(_ controller: AddItemViewController, didFinishEditing item: ChecklistItem)
+protocol ItemDetailViewControllerDelegate: class {
+    func itemDetailViewControllerDidCancel(_ controller: ItemDetailViewController)
+    func itemDetailViewController(_ controller: ItemDetailViewController, didFinishAdding item: ChecklistItem)
+    func itemDetailViewController(_ controller: ItemDetailViewController, didFinishEditing item: ChecklistItem)
 }
 
-class AddItemViewController: UITableViewController,UITextFieldDelegate {
+class ItemDetailViewController: UITableViewController,UITextFieldDelegate {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
     
-    weak var delegate: AddItemViewControllerDelegate?
+    weak var delegate: ItemDetailViewControllerDelegate?
     
     var itemToEdit: ChecklistItem?
     
@@ -67,7 +67,7 @@ class AddItemViewController: UITableViewController,UITextFieldDelegate {
 
 }
 
-extension AddItemViewController
+extension ItemDetailViewController
 {
  
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {

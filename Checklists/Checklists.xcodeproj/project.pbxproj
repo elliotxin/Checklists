@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0336DE681F68F39F0008B085 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0336DE671F68F39F0008B085 /* ChecklistItem.swift */; };
+		038265FC1F72A5B100D11596 /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038265FB1F72A5B100D11596 /* ListDetailViewController.swift */; };
+		0382FEEC1F72651800C3A920 /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0382FEEB1F72651800C3A920 /* AllListsViewController.swift */; };
+		0382FEEE1F726DCB00C3A920 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0382FEED1F726DCB00C3A920 /* Checklist.swift */; };
 		03C925291F6CF2B00081D70A /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C925281F6CF2B00081D70A /* ItemDetailViewController.swift */; };
 		03DBEBBF1F679D8B006C813B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DBEBBE1F679D8B006C813B /* AppDelegate.swift */; };
 		03DBEBC11F679D8B006C813B /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DBEBC01F679D8B006C813B /* ChecklistViewController.swift */; };
@@ -18,6 +21,9 @@
 
 /* Begin PBXFileReference section */
 		0336DE671F68F39F0008B085 /* ChecklistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
+		038265FB1F72A5B100D11596 /* ListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
+		0382FEEB1F72651800C3A920 /* AllListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllListsViewController.swift; sourceTree = "<group>"; };
+		0382FEED1F726DCB00C3A920 /* Checklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
 		03C925281F6CF2B00081D70A /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		03DBEBBB1F679D8B006C813B /* Checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03DBEBBE1F679D8B006C813B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +64,10 @@
 		03DBEBBD1F679D8B006C813B /* Checklists */ = {
 			isa = PBXGroup;
 			children = (
+				0382FEED1F726DCB00C3A920 /* Checklist.swift */,
 				0336DE671F68F39F0008B085 /* ChecklistItem.swift */,
+				0382FEEB1F72651800C3A920 /* AllListsViewController.swift */,
+				038265FB1F72A5B100D11596 /* ListDetailViewController.swift */,
 				03DBEBC01F679D8B006C813B /* ChecklistViewController.swift */,
 				03C925281F6CF2B00081D70A /* ItemDetailViewController.swift */,
 				03DBEBC21F679D8B006C813B /* Main.storyboard */,
@@ -97,12 +106,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "elliot xin";
 				TargetAttributes = {
 					03DBEBBA1F679D8B006C813B = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = EMPSWKU6W8;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -144,8 +154,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				03DBEBC11F679D8B006C813B /* ChecklistViewController.swift in Sources */,
+				038265FC1F72A5B100D11596 /* ListDetailViewController.swift in Sources */,
 				03C925291F6CF2B00081D70A /* ItemDetailViewController.swift in Sources */,
+				0382FEEE1F726DCB00C3A920 /* Checklist.swift in Sources */,
 				0336DE681F68F39F0008B085 /* ChecklistItem.swift in Sources */,
+				0382FEEC1F72651800C3A920 /* AllListsViewController.swift in Sources */,
 				03DBEBBF1F679D8B006C813B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,7 +195,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -190,7 +205,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -232,7 +251,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -240,7 +261,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -274,7 +299,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.Checklists;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -287,7 +313,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.elliot.Checklists;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
